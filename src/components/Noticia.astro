@@ -1,0 +1,22 @@
+---
+const { Titulo } = Astro.props;
+const { Parrafo } = Astro.props;
+const { Img } = Astro.props;
+---
+
+<div class="h-full"
+      style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+      <a href="#">
+        <div
+          class="max-h-[200px] border border-black rounded relative group overflow-hidden hover:border-brand duration-200 hover:animat e-pulse peer">
+          <div class="">
+            <img alt="Noticia" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="w-full duration-200" 
+            src={Img} style="color: transparent;">
+          </div>
+          <div class="absolute bg-gradient-to-b from-transparent to-black/100 w-full h-full px-1 py-2 top-0 left-0 flex  items-start justify-end flex-col group-hover:opacity-100 group-hover:visible opacity-0 invisible duration-200  text-white">
+            <h5 class="translate-y-28 group-hover:translate-y-0 duration-200 text-2xl px-2 text-gray-200"> {Titulo} </h5>
+            <p class="translate-y-28 group-hover:translate-y-0 duration-200 text-red-700 opacity-70 text-xl px-2 delay-100"> {Parrafo}</p>
+          </div>
+        </div>
+      </a>
+</div>

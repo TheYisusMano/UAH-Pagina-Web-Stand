@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Servicio from '../components/Servicio.astro';
+import OfertaAcademica from '../components/OfertaAcademica.astro';
+import Sedes from '../components/Sedes.astro';
+import PreguntasFrecuentes from '../components/PreguntasFrecuentes.astro';
+import Deportes from '../components/Deportes.astro';
+import ComunidadHumboldt from '../components/ComunidadHumboldt.astro';
+import Noticias from '../components/Noticias.astro';
+import Titulos from '../components/Titulos.astro';
+import Testimonio from '../components/Testimonio.astro';
+import CuentaRegresiva from "../components/CuentaRegresiva.astro";
+---
+<Layout title="Inicio">
+	<Hero source="../src/img/VideoCharlaInicio.mp4" h2="CLASE UAH" p="Amplia tus conocimientos" frase="“El saber y el reconocimiento son la alegría y la razón de la humanidad.”" cita="Alejandro de Humboldt"/>
+	<Servicio />
+	<CuentaRegresiva client:visible />
+	<OfertaAcademica client:visible />
+	<Sedes client:visible />
+	<Deportes client:visible />
+	<Titulos titulowhite="Algunos" titulored="Testimonios" clase="py-8" client:visible/>
+	<Testimonio client:visible/>
+	<Titulos  titulowhite="Ultimas" titulored="Noticias" clase="pt-8" client:visible/>
+	<Noticias   client:visible/>
+	<ComunidadHumboldt  client:visible/>
+	<Titulos  titulowhite="Preguntas" titulored="Frecuentes" />
+	<PreguntasFrecuentes client:visible/>
+</Layout>
+

@@ -1,0 +1,226 @@
+---
+import Botones from '../components/Botones.astro';
+import Titulos from '../components/Titulos.astro';
+---
+
+<section class="pt-24">
+    <Titulos titulowhite="Oferta" titulored="Académica"/>
+    <div class="flex flex-col lg:flex-row lg:gap-10">
+        <div class="lg:w-3/12 sm:w-full ">
+            <div class="text-center flex justify-center">
+                <img class="h-10 lg:h-14 pr-4 mt-2 hover:cursor-pointer hover:opacity-70" src="../src/img/birrete.webp"></img>
+                <h3 class="text-red-900  dark:text-red-500 sm:text-3xl lg:text-4xl pt-5 font-semibold hover:cursor-pointer hover:opacity-70">Pregrado</h3>
+            </div>
+            <div class=" text-black font-medium dark:text-white text-2xl">
+                <ul class="ml-16 border-l-4 border-red-900 dark:border-red-500 pl-8 my-14 cursor-pointer select-none">
+                    <li class="py-3 border-red-950 dark:border-red-500  dark:active:text-zinc-900 dark:focus:text-zinc-900 text-left hover:border-b-2 hover:opacity-70"><button id="informatica" class="">Ingeniería Informática</button></li>
+                    <li class="py-3 border-red-950 dark:border-red-500 dark:active:text-zinc-900 dark:focus:text-zinc-900 text-left hover:border-b-2 hover:opacity-70"><button id="contaduria" class="">Contaduria Pública</button></li>
+                    <li class="py-3 border-red-950 dark:border-red-500 dark:active:text-zinc-900 dark:focus:text-zinc-900 text-left hover:border-b-2 hover:opacity-70"><button id="economia" class="">Economía</button></li>
+                    <li class="py-3 border-red-950 dark:border-red-500 dark:active:text-zinc-900 dark:focus:text-zinc-900 text-left hover:border-b-2 hover:opacity-70"><button id="publicidad" class="">Publicidad</button></li>
+                    <li class="py-3 border-red-950 dark:border-red-500 dark:active:text-zinc-900 dark:focus:text-zinc-900 hover:border-b-2 hover:opacity-70"><button class="text-left" id="administracionEmpresas">Administración de Empresas</button></li>
+                    <li class="py-3 border-red-950 dark:border-red-500 dark:active:text-zinc-900 dark:focus:text-zinc-900 text-left hover:border-b-2 hover:opacity-70"><button id="comercio" class="">Comercio Internacional</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="lg:pt-20 lg:w-6/12">
+            <article class="relative m-auto w-5/6 cursor-pointer" >
+                <img loading="lazy" id="imgchange" class="shadow-sm shadow-black rounded-lg object-cover w-full" src="../src/img/Informatica.webp" alt="">
+                <img loading="lazy" id="iconochange" class="absolute w-[200px] bottom-0 left-0 right-0 m-auto translate-y-1/4 opacity-0" src="../src/img/informaticaIcon.webp" alt="">
+            </article>
+        </div>
+        <div class="lg:w-3/12">
+            <div class="text-center flex justify-center">
+                <h3 class="text-red-900 dark:text-red-500 text-3xl lg:text-4xl py-5 font-semibold hover:cursor-pointer hover:opacity-70">Postgrado</h3>
+                <img class="h-10 lg:h-14 pl-4 pt-4 mt-2" src="../src/img/birrete.webp"></img>
+            </div>
+            <div class="text-neutral-950 dark:text-white text-2xl w-full">
+                <ul class="border-r-4 border-red-900 dark:border-red-500 mr-16 mb-14 cursor-pointer">
+                    <li class="py-3 active:text-zinc-900 focus:text-zinc-900 text-right border-red-950 dark:border-red-500 pr-8 hover:border-b-2 hover:opacity-70"><button id="derechosTelecomunicaciones" class="text-right">Derecho de las Telecomunicaciones</button></li>
+                    <li class="py-3 active:text-zinc-900 focus:text-zinc-900 text-right border-red-950 dark:border-red-500 hover:border-b-2 hover:opacity-70"><button id="educacionDistancia" class="text-right pr-8">Estrategia para la educación a Distancia</button>
+                </ul>
+            </div>
+        </div>
+    </div>
+<section/>
+
+<div class="flex justify-center">
+    <h3 class="text-red-900 dark:text-white text-4xl font-bold pt-5 hover:cursor-pointer hover:opacity-70">Diplomados</h3>
+</div>
+<section class="flex-wrap diplomados">
+    <div class="flex justify-center pt-5">
+        <Botones name="Gerencia de Centro de Salud"> </Botones>
+        <Botones name="Componente Docente para el Desempeño en la Educación Superior"> </Botones>
+        <Botones name="Mercadeo en las Telecomunicaciones"> </Botones>
+    </div >
+    <div class="flex justify-center pt-2">
+        <Botones name="Gerencia de Proyecto"> </Botones>
+        <Botones name="Banca y Finanzas"> </Botones>
+        <Botones name="Gerencia Estratégica Financiera"> </Botones>
+        <Botones name="Gerencia de Talento Humano"> </Botones>
+    </div>
+    <div class="flex justify-center pt-2 pb-5">
+        <Botones name="Negociaciones Internacionales"> </Botones>
+        <Botones name="Gerencia de Mercadeo y Ventas"> </Botones>
+        <Botones name="Investigación en el Contexto Social"> </Botones>
+    </div>
+</section>
+
+
+<style>
+	@keyframes show {
+		from{
+			opacity: 0;
+			scale: 40%;
+		}
+
+		to{
+			opacity: 1;
+			scale: 100%;
+		}
+	}
+
+    .diplomados , div{
+		view-timeline-name: --image;
+		view-timeline-axis: block;
+		animation-timeline: --image;
+		animation-name: show;
+
+        animation-range: entry 5% cover 15%;
+        animation-fill-mode: both;
+	}
+
+    article {
+  transition: all 0.3s ease;
+}
+
+article img:last-child {
+  transition: 0.3s ease;
+}
+
+article:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+article::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0) 95%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+article:hover::before {
+  opacity: 1;
+}
+
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
+}
+article {
+  transition: all 0.3s ease;
+}
+
+article img:last-child {
+  transition: 0.3s ease;
+}
+
+article:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+article::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0) 95%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+article:hover::before {
+  opacity: 1;
+}
+
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+</style>
+
+
+<script>
+    let informaticaBtn = document.getElementById("informatica");
+    let contaduriaBtn = document.getElementById("contaduria");
+    let economiaBtn = document.getElementById("economia");
+    let administracionEmpresasBtn = document.getElementById("administracionEmpresas");
+    let publicidadBtn = document.getElementById("publicidad");
+    let comercioBtn = document.getElementById("comercio");
+    let derechosTelecomunicacionesBtn = document.getElementById("derechosTelecomunicaciones");
+    let educacionDistanciaBtn = document.getElementById("educacionDistancia");
+    let imgchange = document.getElementById("imgchange");
+
+    informaticaBtn.onclick = function() {
+        imgchange.src = "../src/img/Informatica.webp";
+        iconochange.src = "../src/img/informaticaIcon.webp";
+        imgchange.classList.toggle("animate-blurred-fade-in");
+
+    }
+    contaduriaBtn.onclick = function() {
+        imgchange.src = "../src/img/contaduria.webp";
+        iconochange.src = "../src/img/contadorIcon.webp";
+        imgchange.classList.toggle("animate-blurred-fade-in");
+    }
+
+    economiaBtn.onclick = function() {
+        imgchange.src = "../src/img/economia.webp";
+        iconochange.src = "../src/img/economiaIcon.webp";
+        imgchange.classList.toggle("animate-blurred-fade-in");
+    }
+
+    publicidadBtn.onclick = function() {
+        imgchange.src = "../src/img/publicidad1.webp";
+        iconochange.src = "../src/img/publicidadIcon.webp";
+        imgchange.classList.toggle("animate-blurred-fade-in");
+    }
+
+    administracionEmpresasBtn.onclick = function() {
+        imgchange.src = "../src/img/administracionEmpresas.webp";
+        iconochange.src = "../src/img/administracionIcon.webp";
+        imgchange.classList.toggle("animate-blurred-fade-in");
+    }
+
+    comercioBtn.onclick = function() {
+        imgchange.src = "../src/img/comercio.webp";
+        iconochange.src = "../src/img/comercioIcon.webp";
+        imgchange.classList.toggle("animate-blurred-fade-in");
+    }
+
+    derechosTelecomunicacionesBtn.onclick = function() {
+        imgchange.src = "../src/img/derechosTelecomunicaciones.webp"
+        iconochange.src = "../src/img/telecomunicacionesIcon.webp";
+        imgchange.classList.toggle("animate-blurred-fade-in");
+    }
+
+    educacionDistanciaBtn.onclick = function() {
+        imgchange.src = "../src/img/educacionDistancia.webp";
+        iconochange.src = "../src/img/educacionIcon.webp";
+        imgchange.classList.toggle("animate-blurred-fade-in");
+    }
+</script>

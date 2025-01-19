@@ -1,0 +1,39 @@
+---
+import CardsSedes from './CardsSedes.astro';
+import Titulos from '../components/Titulos.astro';
+---
+
+<section class="mt-8 animate__animated  animate__backInRight ">
+    <Titulos titulored="Sedes" titulowhite="Distintas"/>
+    <div class="justify-center sm:flex-col lg:flex lg:flex-row border-red-950 dark:border-red-900 border-y-2 mx-20 mt-4">
+        <CardsSedes titulo="Dos Caminos" contenido="Av. Rómulo Gallegos" src="../src/img/SedeAndresBello.webp" alt="Dos Caminos"/>
+        <CardsSedes titulo="El Bosque" contenido="Av. Andres Bello" src="../src/img/SedeAndresBello.webp" alt="El Bosque"/>
+        <CardsSedes titulo="Plaza Venezuela" contenido="Av. Lima" src="../src/img/SedeAndresBello.webp" alt="Plaza Venezuela"/>
+        <CardsSedes titulo="Andrés Bello" contenido="Av. Principal del Bosque" src="../src/img/SedeAndresBello.webp" alt="Andrés Bello"/>
+        <CardsSedes titulo="Valencia" contenido="Final Av. Pocaterra" src="../src/img/SedeAndresBello.webp" alt="Valencia"/>
+    </div>
+</section>
+
+<style>
+	@keyframes show {
+		from{
+			opacity: 0;
+			scale: 20%;
+		}
+
+		to{
+			opacity: 1;
+			scale: 100%;
+		}
+	}
+
+	div {
+		view-timeline-name: --image;
+		view-timeline-axis: block;
+		animation-timeline: --image;
+		animation-name: show;
+
+        animation-range: entry 10% cover 25%;
+        animation-fill-mode: both;
+	}
+</style>

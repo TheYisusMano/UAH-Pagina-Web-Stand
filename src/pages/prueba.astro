@@ -1,0 +1,92 @@
+---
+// No additional imports needed
+---
+
+<section class="relative w-full min-h-screen grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+    <!-- Left Section -->
+    <div class="relative bg-gray-100 flex items-center justify-center p-8 md:p-16">
+      <h1 class="font-serif text-6xl md:text-7xl lg:text-8xl text-gray-900 animate-fade-up z-10">
+        Academics
+      </h1>
+      <div class="absolute inset-0 opacity-10">
+        <img 
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ty6t3mmMyE9VjOy8ic3IIj4uDEw9V4.png" 
+          alt="Background diagrams"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  
+    <!-- Right Section -->
+    <div class="relative bg-gray-900 text-white flex items-center justify-center p-8 md:p-16">
+      <div class="relative z-10">
+        <p class="text-3xl md:text-4xl lg:text-5xl font-light leading-tight animate-fade-left">
+          Learning at Harvard can happen for every type of learner, at any phase of life.
+        </p>
+      </div>
+      <div class="absolute inset-0 opacity-50">
+        <img 
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ty6t3mmMyE9VjOy8ic3IIj4uDEw9V4.png" 
+          alt="Students learning"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+  
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+  
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(2rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @keyframes fadeLeft {
+      from {
+        opacity: 0;
+        transform: translateX(2rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    .animate-fade-up {
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+  
+    .animate-fade-left {
+      animation: fadeLeft 0.8s ease-out 0.3s forwards;
+      opacity: 0;
+    }
+  
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .animate-fade-left {
+        animation-delay: 0.5s;
+      }
+    }
+  
+    /* Reduced motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-up,
+      .animate-fade-left {
+        animation: none;
+        opacity: 1;
+      }
+    }
+  </style>
+  
+  

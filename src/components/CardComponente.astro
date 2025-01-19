@@ -1,0 +1,48 @@
+---
+const { ImgFull } = Astro.props;
+const { ImgIcon } = Astro.props;
+---
+
+<article class="relative w-[550px] cursor-pointer" >
+  <img loading="lazy" class="shadow-sm shadow-black rounded-lg object-cover w-full" src={ImgFull} alt="">
+  <img loading="lazy" class="absolute w-[300px] bottom-0 left-0 right-0 m-auto translate-y-1/4 opacity-0" src={ImgIcon} alt="">
+</article>
+
+<style>
+  article {
+  transition: all 0.3s ease;
+}
+
+article img:last-child {
+  transition: 0.3s ease;
+}
+
+article:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+article::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0) 95%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+article:hover::before {
+  opacity: 1;
+}
+
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(-80%);
+}
+</style>

@@ -1,0 +1,28 @@
+---
+import ButtonDarkMode from './ButtonDarkMode.astro';
+---
+
+<header class="bg-red-900 dark:bg-red-950 px-10 py-3 flex items-center justify-between animate-slide-in-top animation-delay-300 animate-duration-slow sticky top-0  w-full z-10">
+		<div class="text-white text-xl lg:text-1xl hover:animate-pop">
+			<img class=" w-16 h-16 inline-flex " src="../src/img/uah.webp"></img>
+		  	<a href="#" class="inline-flex">UAH</a>
+		</div>
+		<div class="hidden lg:block">
+		  <ul class="flex items-center space-x-5 text-xl text-neutral-300 dark:text-neutral-100">
+			<li class="hover:animate-pulsing hover:opacity-70 hover:border-b-2"><a href="index.html">Inicio</a></li>
+			<li class="hover:animate-pulsing hover:opacity-70 hover:border-b-2"><a href="servicioPag.html">Servicio</a></li>
+			<li class="hover:animate-pulsing hover:opacity-70 hover:border-b-2"><a href="ofertaPag.html">Oferta Academica</a></li>
+			<li class="hover:animate-pulsing hover:opacity-70 hover:border-b-2"><a href="sedesPag.html">Sedes</a></li>
+			<li class="hover:animate-pulsing hover:opacity-70 hover:border-b-2"><a href="vidaEstudiantilPag.html">Vida Estudiantil</a></li>
+			<li class="hover:animate-pulsing hover:opacity-70 hover:border-b-2"><a href="noticiasPag.html">Noticias</a></li>
+		  </ul>
+		</div>
+		<div class="lg:hidden">
+		  	<button class="outline-none mobile-menu-button">
+				<svg class="w-6 h-6 text-white hover:animate-pulsing hover:opacity-20" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+					<path d="M4 6h16M4 12h16M4 18h16"></path>
+			   </svg>
+		    </button>
+		</div>
+		<ButtonDarkMode />
+</header>

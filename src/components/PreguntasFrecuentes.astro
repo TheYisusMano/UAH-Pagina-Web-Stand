@@ -1,0 +1,48 @@
+---
+---
+<section id="section" class="pt-3 pb-10 w-8/12 lg:w-5/12 m-auto  flex flex-col gap-5">
+    <details class="text-white text-2xl hover:cursor-pointer" >
+        <summary class="bg-red-900  rounded-t-lg p-3 pl-6 list-none flex "> ¿Cómo ingresar en la Universidad? </summary>
+            <p class="p-5 bg-neutral-950 rounded-b-lg "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti ipsam dolorum, repudiandae molestias maxime quia modi accusantium eum voluptates. Rem necessitatibus corporis placeat quod libero? Corporis rerum magnam fuga.
+            </p>   
+    </details>
+    <details class="text-white text-2xl hover:cursor-pointer">
+        <summary class="bg-red-900 rounded-t-lg  p-3 pl-6  list-none flex"> ¿Cómo es el proceso de equivalencia?</summary>
+            <p class="p-5 bg-neutral-950 rounded-b-lg"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nobis est sint recusandae delectus, ratione at exercitationem voluptatibus laborum nihil dignissimos accusamus harum laudantium illum distinctio consequuntur nesciunt sed aliquid?
+            </p>   
+    </details>
+    <details class=" text-white text-2xl hover:cursor-pointer">
+        <summary class="  bg-red-900 rounded-t-lg  p-3 pl-6 list-none flex"> ¿El Curso Introductorio es obligatorio? </summary>
+            <p class="p-5 bg-neutral-950 rounded-b-lg"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, aliquam assumenda quidem et pariatur qui doloribus, dolorum repellat aspernatur placeat laboriosam neque veniam quas numquam quod. Ad non quos beatae.
+            </p>   
+    </details>
+    <details class="text-white text-2xl hover:cursor-pointer" >
+        <summary class="bg-red-900 rounded-t-lg p-3 pl-6 list-none flex"> ¿Cuál es el costo del semestre? </summary>
+            <p class="p-5 bg-neutral-950 rounded-b-lg"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem suscipit, incidunt ipsum ut delectus ipsam, soluta minus perferendis, aliquid doloremque perspiciatis. Cumque doloribus possimus harum expedita voluptas fugiat dolorum a.
+            </p>   
+    </details>
+</section>
+
+<style>
+	@keyframes show {
+		from{
+			opacity: 0;
+			scale: 40%;
+		}
+
+		to{
+			opacity: 1;
+			scale: 100%;
+		}
+	}
+
+	details {
+		view-timeline-name: --image;
+		view-timeline-axis: block;
+		animation-timeline: --image;
+		animation-name: show;
+
+        animation-range: entry 5% cover 15%;
+        animation-fill-mode: both;
+	}
+</style>

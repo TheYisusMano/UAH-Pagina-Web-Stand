@@ -1,0 +1,60 @@
+---
+import Titulos from '../components/Titulos.astro';
+---
+<div class="pt-20">
+    <Titulos titulored="Inscripciones" titulowhite="Proximas" />
+    <h3 class="lg:text-3xl text-center pt-4 text-neutral-900 dark:text-neutral-100">Semestre Regular</h3>
+    <div class="flex flex-col items-center ml-2">
+        <div class="flex items-center justify-center space-x-4 mt-4">
+            <div class="flex flex-col items-center px-4">
+                <span class="text-4xl lg:text-6xl text-red-900 dark:text-red-500" id="dias">00</span>
+                <span class="text-neutral-950 text-4xl lg:text-3xl mt-2 dark:text-neutral-100">Days</span>
+            </div>
+            <span class="w-[3px] h-24 bg-red-950"></span>
+            <div class="flex flex-col items-center px-4">
+                <span  class="text-4xl lg:text-6xl text-red-900 dark:text-red-500" id="horas">23</span>
+                <span class="text-neutral-950 lg:text-3xl mt-2 dark:text-neutral-100">Hours</span>
+            </div>
+            <span class="w-[3px] h-24 bg-red-950"></span>
+            <div class="flex flex-col  items-center px-4">
+                <span class="text-4xl lg:text-6xl text-red-900 dark:text-red-500" id="minutos">59</span>
+                <span class="text-neutral-950 lg:text-3xl mt-2 dark:text-neutral-100">Minutes</span>
+            </div>
+            <span class="w-[3px] h-24 bg-red-950"></span>
+            <div class="flex flex-col items-center px-4">
+                <span class="text-4xl lg:text-6xl text-red-900 dark:text-red-500" id="segundos">28</span>
+                <span class="text-neutral-950  lg:text-3xl mt-2 dark:text-neutral-100">Seconds</span>
+            </div>
+        </div>                      
+    </div>
+</div>
+
+<script>
+    const diasHtml = document.getElementById("dias");
+    const horasHtml = document.getElementById("horas");
+    const minutosHtml = document.getElementById("minutos");
+    const segundosHtml = document.getElementById("segundos");
+
+    const semestre = new Date("February 3, 2025 00:00:00").getTime();
+
+    setInterval(() => {
+        let actual = new Date().getTime();
+
+        let tiempo = semestre - actual;
+
+        let dias = Math.floor(tiempo/86400000);
+        let horas = Math.floor(tiempo/3600000) % 24;
+        let minutos =  Math.floor(tiempo/60000) % 60;
+        let segundos =  Math.floor(tiempo/1000) % 60;
+
+        diasHtml.innerHTML = dias;
+        horasHtml.innerHTML = horas;
+        minutosHtml.innerHTML = minutos;
+        segundosHtml.innerHTML = segundos;
+
+        if( horas < 10) horasHtml.innerHTML = "0" + horas;
+        if( minutos < 10) minutosHtml.innerHTML = "0" + minutos;
+        if( segundos < 10) segundosHtml.innerHTML = "0" + segundos;
+
+    }, 1000);
+</script>

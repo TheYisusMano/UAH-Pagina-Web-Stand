@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Titulos from '../components/Titulos.astro';
+---
+<Layout title="Pagina uah">
+	<Hero source="../src/img/VideoEstudiante.mp4" h2="CLASE UAH" p="Amplia tus conocimientos" frase="“El saber y el reconocimiento son la alegría y la razón de la humanidad.”" cita="Alejandro de Humboldt"/>
+	<Titulos titulowhite="Distintas" titulored="Sedes" clase="pt-24"/>
+	<div class=" dark:text-white text-black mb-4 text-center">
+		<ul class="pt-8 pb-4 inline-flex space-x-10 text-xl border-b-2 border-opacity-80 px-4 hover:cursor-pointer border-black dark:border-white">
+			<li id="DosCaminos" class="hover:opacity-70 hover:text-red-900 ">Los Dos Caminos</li>
+			<li id="AndresBello" class="hover:opacity-70 hover:text-red-900">Andrés Bello</li>
+			<li id="ElBosque" class="hover:opacity-70 hover:text-red-900 ">El Bosque</li>
+			<li id="Valencia" class="hover:opacity-70 hover:text-red-900">Valencia</li>
+			<li id="PlazaVenezuela" class="hover:opacity-70 hover:text-red-900">Plaza Venezuela</li>
+		</ul>
+	</div>
+	<div class="px-10 m-auto">
+		<img id="imgSedes" class="m-auto py-8 w-[600px] h-[400px]" src="../src/img/SedeValencia.webp" alt="">
+	</div>
+	<div class="m-auto text-center pb-4 h-1/3 ">
+        <h4 class="text-red-900 text-3xl lg:text-3xl pb-3 font-semibold text-center">Ubicación</h4>
+        <p id="ubicacion" class="text-black dark:text-white text-xl lg:text-xl ">Av. Rómulo Gallegos, Con 1ra. Transversal de Montecristo Edificio Universidad Alejandro de Humboldt.</p>
+    </div>
+	<iframe id="direccion" class="m-auto my-10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1347.529969828212!2d-66.82904315425235!3d10.494940552779742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59cbca2746bd%3A0xfccc4385c36177c8!2sUniversidad%20Alejandro%20de%20Humboldt!5e0!3m2!1ses!2sve!4v1715555939472!5m2!1ses!2sve" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</Layout>
+
+<script>
+	let dosCaminosBtn = document.getElementById("DosCaminos");
+	let andresBelloBtn = document.getElementById("AndresBello");
+	let elBosqueBtn = document.getElementById("ElBosque");
+	let valenciaBtn = document.getElementById("Valencia");
+	let plazaVenezuelaBtn = document.getElementById("PlazaVenezuela");
+	let imgSedes = document.getElementById("imgSedes");
+	let direccion = document.getElementById("direccion");
+
+    dosCaminosBtn.onclick = function() {
+        imgSedes.src = "../src/img/SedeDosCaminos.webp";
+		document.getElementById('ubicacion').innerHTML = 'Av. Rómulo Gallegos, Con 1ra. Transversal de Montecristo Edificio Universidad Alejandro de Humboldt.';
+		direccion.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1347.529969828212!2d-66.82904315425235!3d10.494940552779742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59cbca2746bd%3A0xfccc4385c36177c8!2sUniversidad%20Alejandro%20de%20Humboldt!5e0!3m2!1ses!2sve!4v1715555939472!5m2!1ses!2sve";
+    }
+
+	andresBelloBtn.onclick = function() {
+        imgSedes.src = "../src/img/SedeAndresBello.webp";
+		document.getElementById('ubicacion').innerHTML = 'Av. Andres Bello con Av. Urdaneta, Edif. Universidad Alejandro de Humboldt.';
+		direccion.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.948096790235!2d-66.90262682584606!3d10.504754389627976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a592daea1d0e1%3A0xd74875e1af8539a2!2sUniversidad%20Alejandro%20de%20Humbolt!5e0!3m2!1ses!2sve!4v1715556209689!5m2!1ses!2sve";
+	}
+
+	elBosqueBtn.onclick = function() {
+        imgSedes.src = "../src/img/SedeDosCaminos.webp";
+		document.getElementById('ubicacion').innerHTML = 'Av. Principal del Bosque, Chacaito Edif. Universidad Alejandro de Humboldt.';
+		direccion.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1100.878882676699!2d-66.86856030423151!3d10.493857599187347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a58e2ac29baad%3A0x91bed4993bd43991!2sUniversidad%20Alejandro%20de%20Humboldt!5e0!3m2!1ses!2sve!4v1715556368886!5m2!1ses!2sve";
+    }
+
+	valenciaBtn.onclick = function() {
+        imgSedes.src = "../src/img/SedeValencia.webp";
+		document.getElementById('ubicacion').innerHTML = 'Final Av. Pocaterra, Cruce con Calle Colinas, El Trigal Centro, Edif. Universidad Alejandro de Humboldt.';
+		direccion.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.54988472918!2d-67.98850573198341!3d10.217160014784426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e805d729e819059%3A0xd465d04cbda6f0bd!2sUniversidad%20Alejandro%20de%20Humboldt!5e0!3m2!1ses!2sve!4v1715556467119!5m2!1ses!2sve";
+	}
+
+	plazaVenezuelaBtn.onclick = function() {
+        imgSedes.src = "../src/img/SedePlazaVenezuela.webp";
+		document.getElementById('ubicacion').innerHTML = 'Av. Lima, entre Plaza Venezuela y Av. Libertador, Los Caobos Edif. Universidad Alejandro de Humboldt.';
+		direccion.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.0318512101244!2d-66.88840982584631!3d10.498155289634207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5926cacc2321%3A0x748d206c4d9ab6d7!2sUniversidad%20Alejandro%20de%20Humboldt!5e0!3m2!1ses!2sve!4v1715556515223!5m2!1ses!2sve";
+	}
+</script>

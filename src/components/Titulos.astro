@@ -1,0 +1,11 @@
+---
+const { titulowhite } = Astro.props;
+const { titulored } = Astro.props;
+const {clase} = Astro.props;
+---
+<div class={clase}>
+    <div class="hover:animate-pulsing hover:cursor-pointer hover:opacity-70 ">
+        <h2 class="text-black dark:text-white ms:text-3xl text-4xl lg:text-5xl flex justify-center font-bold"  >{titulowhite}</h2>
+        <h2 class="text-red-800 dark:text-red-500 ms:text-3xl  text-4xl lg:text-5xl flex justify-center font-bold " >{titulored}</h2>
+    </div>
+</div>

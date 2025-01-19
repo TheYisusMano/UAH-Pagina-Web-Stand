@@ -1,0 +1,49 @@
+---
+import Titulos from '../components/Titulos.astro';
+import Botones from './Botones.astro';
+import CardComponente from './CardComponente.astro';
+---
+<article class="pt-8 ">
+    <Titulos titulored="Extracurriculares" titulowhite="Actividades" clase="pb-10"/>
+    <div id="CardComponente" class="flex justify-center ">
+        <CardComponente ImgFull = "../src/img/DeporteUah2.webp" ImgIcon = "../src/img/uahDeporteIcon.webp" />
+	</div>
+	<div class="flex justify-center pt-16">
+		<Botones name="Voleibol" />
+		<Botones name="Futbol Campo" />
+		<Botones name="Baloncesto" />
+		<Botones name="Karate" />
+		<Botones name="Natación" />
+	</div>
+	<div class="flex justify-center pt-1">
+		<Botones name="Orfeón" />
+		<Botones name="Radio" />
+		<Botones name="Ajedréz" />
+		<Botones name="Atletismo" />
+		<Botones name="Futbol Sala" />
+	</div>
+</article>
+
+<style>
+	@keyframes show {
+		from{
+			opacity: 0;
+			scale: 25%;
+		}
+
+		to{
+			opacity: 1;
+			scale: 100%;
+		}
+	}
+
+	#CardComponente {
+		view-timeline-name: --image;
+		view-timeline-axis: block;
+		animation-timeline: --image;
+		animation-name: show;
+
+        animation-range: entry 15% cover 35%;
+        animation-fill-mode: both;
+	}
+</style>

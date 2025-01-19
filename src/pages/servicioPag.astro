@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Titulos from '../components/Titulos.astro';
+import SubtituloAndText from '../components/SubtituloAndText.astro';
+---
+<Layout title="Pagina uah">
+	<Hero source="../src/img/VideoServicio.mp4" h2="CLASE UAH" p="Amplia tus conocimientos" frase="“Dondequiera que el ciudadano se vuelva indiferente hacia sus semejantes, también lo será el esposo hacia su esposa.”" cita="Alejandro de Humboldt"/>
+	<Titulos titulowhite="Sobre" titulored="Nosotros" clase="pt-44 pb-10"/>
+	<img class="w-2/6 m-auto py-8" src="../src/img/Noticia1.webp" alt="">
+	<div class="flex flex-col p-4">
+		<div class="m-auto flex flex-row justify-center gap-10">
+			<div class=" p-4 border-stone-950 border-x-4 bg-red-900 hover:opacity-90 rounded-lg w-3/12">
+				<img class="m-auto w-4/12 p-4" src="../src/img/mision.webp" alt="">
+				<SubtituloAndText orden="" subtitulo="Misión" parrafo="Ser una organización lider en la capacitación y administración de recursos humanos que el país demanda para el desempeño de profesionales."/>
+			</div>
+			<div class=" p-4 border-stone-950 border-x-4 bg-red-900 hover:opacity-90 rounded-lg w-3/12 ">
+				<img class="m-auto w-4/12 p-4" src="../src/img/vision.webp" alt="">
+				<SubtituloAndText orden="" subtitulo="Visión" parrafo="Busca la verdad mediante la difusión, creación y asimilación del saber."/>
+			</div>
+			<div class="bg-red-900 p-4 border-stone-950 border-x-4 rounded-lg w-3/12 hover:opacity-90 ">
+				<img class="m-auto w-4/12 p-4" src="../src/img/valores.webp" alt="">
+				<SubtituloAndText orden="m-auto" subtitulo="Valores" parrafo="Respeto, Responsabilidad, Justicia, Integridad, Honestidad y Disciplina"/>
+			</div>
+		</div>	
+	</div>
+</Layout>
+
