@@ -5,22 +5,24 @@ import CardComponente from './CardComponente.astro';
 ---
 <article class="pt-8 ">
     <Titulos titulored="Extracurriculares" titulowhite="Actividades" clase="pb-10"/>
-    <div id="CardComponente" class="flex justify-center ">
+    <div id="CardComponente" class="flex justify-center p-4 md:p-0">
         <CardComponente ImgFull = "../src/img/DeporteUah2.webp" ImgIcon = "../src/img/uahDeporteIcon.webp" />
 	</div>
-	<div class="flex justify-center pt-16">
-		<Botones name="Voleibol" />
-		<Botones name="Futbol Campo" />
-		<Botones name="Baloncesto" />
-		<Botones name="Karate" />
-		<Botones name="Natación" />
-	</div>
-	<div class="flex justify-center pt-1">
-		<Botones name="Orfeón" />
-		<Botones name="Radio" />
-		<Botones name="Ajedréz" />
-		<Botones name="Atletismo" />
-		<Botones name="Futbol Sala" />
+	<div class="flex flex-col justify-center pt-4 md:pt-16">
+		<div class="flex flex-wrap justify-center">
+			<Botones name="Voleibol" />
+			<Botones name="Futbol Campo" />
+			<Botones name="Baloncesto" />
+			<Botones name="Karate" />
+			<Botones name="Natación" />
+		</div>
+		<div class="flex flex-wrap justify-center pt-1">
+			<Botones name="Orfeón" />
+			<Botones name="Radio" />
+			<Botones name="Ajedréz" />
+			<Botones name="Atletismo" />
+			<Botones name="Futbol Sala" />
+		</div>
 	</div>
 </article>
 

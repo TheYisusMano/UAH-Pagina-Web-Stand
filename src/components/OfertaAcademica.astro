@@ -9,7 +9,7 @@ import Titulos from '../components/Titulos.astro';
         <div class="lg:w-3/12 sm:w-full ">
             <div class="text-center flex justify-center">
                 <img class="h-10 lg:h-14 pr-4 mt-2 hover:cursor-pointer hover:opacity-70" src="../src/img/birrete.webp"></img>
-                <h3 class="text-red-900  dark:text-red-500 sm:text-3xl lg:text-4xl pt-5 font-semibold hover:cursor-pointer hover:opacity-70">Pregrado</h3>
+                <h3 class="text-red-900  dark:text-red-500 text-3xl lg:text-4xl pt-5 font-semibold hover:cursor-pointer hover:opacity-70">Pregrado</h3>
             </div>
             <div class=" text-black font-medium dark:text-white text-2xl">
                 <ul class="ml-16 border-l-4 border-red-900 dark:border-red-500 pl-8 my-14 cursor-pointer select-none">
@@ -46,19 +46,19 @@ import Titulos from '../components/Titulos.astro';
 <div class="flex justify-center">
     <h3 class="text-red-900 dark:text-white text-4xl font-bold pt-5 hover:cursor-pointer hover:opacity-70">Diplomados</h3>
 </div>
-<section class="flex-wrap diplomados">
-    <div class="flex justify-center pt-5">
+<section class="flex md:flex-row flex-col md:flex-wrap items-center justify-center diplomados md:p-0 px-10">
+    <div class="flex md:flex-row flex-col justify-center pt-5">
         <Botones name="Gerencia de Centro de Salud"> </Botones>
         <Botones name="Componente Docente para el Desempeño en la Educación Superior"> </Botones>
         <Botones name="Mercadeo en las Telecomunicaciones"> </Botones>
     </div >
-    <div class="flex justify-center pt-2">
+    <div class="flex md:flex-row flex-col justify-center pt-2">
         <Botones name="Gerencia de Proyecto"> </Botones>
         <Botones name="Banca y Finanzas"> </Botones>
         <Botones name="Gerencia Estratégica Financiera"> </Botones>
         <Botones name="Gerencia de Talento Humano"> </Botones>
     </div>
-    <div class="flex justify-center pt-2 pb-5">
+    <div class="flex md:flex-row flex-col justify-center pt-2 pb-5">
         <Botones name="Negociaciones Internacionales"> </Botones>
         <Botones name="Gerencia de Mercadeo y Ventas"> </Botones>
         <Botones name="Investigación en el Contexto Social"> </Botones>

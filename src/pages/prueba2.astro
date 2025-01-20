@@ -1,0 +1,85 @@
+---
+// Asegúrate de tener tu video en la carpeta public
+const videoUrl = "/ruta-a-tu-video-de-fondo.mp4";
+---
+
+<div class="w-full h-screen flex flex-col">
+  <section class="lg:bg-black my-2 mx-10 relative animate-slide-in-bottom animate-delay-300 animate-duration-slow lg:shadow-lg lg:shadow-black h-full">
+    <div class="w-full h-full bg-gradient-to-b from-transparent to-80% to-black lg:absolute opacity-80"></div>
+    <video class="h-full w-full lg:rounded-lg object-cover" autoplay loop muted playsinline>
+      <source src={videoUrl} type="video/mp4">
+      Tu navegador no soporta el tag de video.
+    </video>
+
+    <!-- Contenido del hero -->
+    <div class="absolute top-0 left-0 w-full h-full flex flex-col md:flex-row">
+      <!-- Sección izquierda -->
+      <div class="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start p-8">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in animate-delay-500">CLASES UAH</h1>
+        <p class="text-2xl md:text-3xl text-white animate-fade-in animate-delay-700">Amplia tus conocimientos</p>
+      </div>
+
+      <!-- Sección derecha -->
+      <div class="w-full md:w-1/2 flex flex-col justify-center items-center md:items-end p-8">
+        <blockquote class="text-xl md:text-2xl text-white text-right mb-4 animate-fade-in animate-delay-900">
+          "El saber y el reconocimiento son la alegría y la razón de la humanidad."
+        </blockquote>
+        <cite class="text-lg md:text-xl text-white animate-fade-in animate-delay-1000">- Alejandro de Humboldt</cite>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  @keyframes slide-in-bottom {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-bottom {
+    animation: slide-in-bottom 1s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animate-delay-700 {
+    animation-delay: 700ms;
+  }
+
+  .animate-delay-900 {
+    animation-delay: 900ms;
+  }
+
+  .animate-delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  .animate-duration-slow {
+    animation-duration: 1.5s;
+  }
+</style>
