@@ -35,9 +35,9 @@ import Titulos from '../components/Titulos.astro';
 	let direccion = document.getElementById("direccion");
 
     dosCaminosBtn.onclick = function() {
-        imgSedes.src = "../src/img/SedeDosCaminos.webp";
-		document.getElementById('ubicacion').innerHTML = 'Av. Rómulo Gallegos, Con 1ra. Transversal de Montecristo Edificio Universidad Alejandro de Humboldt.';
-		direccion.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1347.529969828212!2d-66.82904315425235!3d10.494940552779742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59cbca2746bd%3A0xfccc4385c36177c8!2sUniversidad%20Alejandro%20de%20Humboldt!5e0!3m2!1ses!2sve!4v1715555939472!5m2!1ses!2sve";
+        (imgSedes as HTMLImageElement).src = "../src/img/SedeDosCaminos.webp";
+        document.getElementById('ubicacion').innerHTML = 'Av. Rómulo Gallegos, Con 1ra. Transversal de Montecristo Edificio Universidad Alejandro de Humboldt.';
+        (direccion as HTMLIFrameElement).src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1347.529969828212!2d-66.82904315425235!3d10.494940552779742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59cbca2746bd%3A0xfccc4385c36177c8!2sUniversidad%20Alejandro%20de%20Humboldt!5e0!3m2!1ses!2sve!4v1715555939472!5m2!1ses!2sve";
     }
 
 	andresBelloBtn.onclick = function() {
