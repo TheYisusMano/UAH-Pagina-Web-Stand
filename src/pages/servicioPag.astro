@@ -4,24 +4,73 @@ import Hero from '../components/Hero.astro';
 import Titulos from '../components/Titulos.astro';
 import SubtituloAndText from '../components/SubtituloAndText.astro';
 ---
-<Layout title="Pagina uah">
-	<Hero source="../src/img/VideoServicio.mp4" h2="CLASE UAH" p="Amplia tus conocimientos" frase="“Dondequiera que el ciudadano se vuelva indiferente hacia sus semejantes, también lo será el esposo hacia su esposa.”" cita="Alejandro de Humboldt" clase="w-[100%] mx-auto"/>
-	<Titulos titulowhite="Sobre" titulored="Nosotros" clase="pt-20 pb-10"/>
-	<div class="flex flex-col p-4 mb-12">
-		<div class="m-auto flex flex-row justify-center gap-10">
-			<div class=" p-4 border-stone-950 border-x-4 bg-red-900 hover:opacity-90 rounded-lg w-3/12">
-				<img class="m-auto w-4/12 p-4" src="../src/img/mision.webp" alt="">
-				<SubtituloAndText orden="text-center" subtitulo="Misión" parrafo="Ser una organización lider en la capacitación y administración de recursos humanos que el país demanda para el desempeño de profesionales."/>
+
+<Layout title="Servicios UAH">
+	<Hero source="../src/img/VideoServicio.mp4" h2="SERVICIOS UAH" p="Descubre todo lo que tenemos para ofrecerte" frase="“Dondequiera que el ciudadano se vuelva indiferente hacia sus semejantes, también lo será el esposo hacia su esposa.”" cita="Alejandro de Humboldt" clase="w-[100%] mx-auto"/>
+	
+	<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<Titulos titulowhite="Nuestros" titulored="Servicios" clase="mb-12"/>
+		
+		<!-- Sección de Servicios -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+			<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-red-900/20 hover:border-red-900/50 transition-all duration-300">
+				<div class="text-center">
+					<img src="../src/img/biblioteca.webp" alt="Biblioteca" class="w-20 h-20 mx-auto mb-4"/>
+					<h3 class="text-2xl font-bold text-red-900 mb-2">Biblioteca Digital</h3>
+					<p class="text-gray-700 dark:text-gray-300">Acceso a miles de recursos académicos y publicaciones especializadas.</p>
+				</div>
 			</div>
-			<div class=" p-4 border-stone-950 border-x-4 bg-red-900 hover:opacity-90 rounded-lg w-3/12 ">
-				<img class="m-auto w-4/12 p-4" src="../src/img/vision.webp" alt="">
-				<SubtituloAndText orden="text-center" subtitulo="Visión" parrafo="Busca la verdad mediante la difusión, creación y asimilación del saber."/>
+			
+			<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-red-900/20 hover:border-red-900/50 transition-all duration-300">
+				<div class="text-center">
+					<img src="../src/img/asesoria.webp" alt="Asesoría" class="w-20 h-20 mx-auto mb-4"/>
+					<h3 class="text-2xl font-bold text-red-900 mb-2">Asesoría Académica</h3>
+					<p class="text-gray-700 dark:text-gray-300">Orientación personalizada para tu desarrollo académico y profesional.</p>
+				</div>
 			</div>
-			<div class="bg-red-900 p-4 border-stone-950 border-x-4 rounded-lg w-3/12 hover:opacity-90 ">
-				<img class="m-auto w-4/12 p-4" src="../src/img/valores.webp" alt="">
-				<SubtituloAndText orden="m-auto text-center" subtitulo="Valores" parrafo="Respeto, Responsabilidad, Justicia, Integridad, Honestidad y Disciplina"/>
+			
+			<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-red-900/20 hover:border-red-900/50 transition-all duration-300">
+				<div class="text-center">
+					<img src="../src/img/bolsa_trabajo.webp" alt="Bolsa de Trabajo" class="w-20 h-20 mx-auto mb-4"/>
+					<h3 class="text-2xl font-bold text-red-900 mb-2">Bolsa de Trabajo</h3>
+					<p class="text-gray-700 dark:text-gray-300">Conectamos a nuestros estudiantes con oportunidades laborales.</p>
+				</div>
 			</div>
-		</div>	
-	</div>
+		</div>
+
+		<!-- Sección de Misión, Visión y Valores -->
+		<div class="bg-gradient-to-br from-red-900 to-red-950 rounded-lg p-8 mb-16">
+			<h2 class="text-3xl font-bold text-white text-center mb-8">Nuestra Filosofía</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+					<h3 class="text-2xl font-bold text-red-200 mb-4">Misión</h3>
+					<p class="text-white">Ser una organización líder en la capacitación y administración de recursos humanos que el país demanda para el desempeño de profesionales.</p>
+				</div>
+				<div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+					<h3 class="text-2xl font-bold text-red-200 mb-4">Visión</h3>
+					<p class="text-white">Busca la verdad mediante la difusión, creación y asimilación del saber.</p>
+				</div>
+				<div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+					<h3 class="text-2xl font-bold text-red-200 mb-4">Valores</h3>
+					<p class="text-white">Respeto, Responsabilidad, Justicia, Integridad, Honestidad y Disciplina</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Testimonios -->
+		<div class="mb-16">
+			<h2 class="text-3xl font-bold text-red-900 text-center mb-8">Lo que dicen nuestros estudiantes</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+					<p class="text-gray-700 italic mb-4">"Los servicios de la UAH han sido fundamentales para mi desarrollo profesional. La bolsa de trabajo me ayudó a conseguir mi primer empleo."</p>
+					<p class="text-red-900 font-semibold">- Ana Rodríguez, Egresada de Administración</p>
+				</div>
+				<div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+					<p class="text-gray-700 italic mb-4">"La biblioteca digital es un recurso invaluable. Me ha permitido acceder a material de estudio de alta calidad desde cualquier lugar."</p>
+					<p class="text-red-900 font-semibold">- Luis Pérez, Estudiante de Ingeniería</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
 
