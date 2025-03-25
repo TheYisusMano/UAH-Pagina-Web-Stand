@@ -1,48 +1,88 @@
 ---
+import Titulos from './Titulos.astro';
 ---
-<section id="section" class="pt-3 pb-10 w-8/12 lg:w-5/12 m-auto  flex flex-col gap-5">
-    <details class="text-white text-2xl hover:cursor-pointer" >
-        <summary class="bg-red-900  rounded-t-lg p-3 pl-6 list-none flex "> ¿Cómo ingresar en la Universidad? </summary>
-            <p class="p-5 bg-neutral-950 rounded-b-lg "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti ipsam dolorum, repudiandae molestias maxime quia modi accusantium eum voluptates. Rem necessitatibus corporis placeat quod libero? Corporis rerum magnam fuga.
-            </p>   
-    </details>
-    <details class="text-white text-2xl hover:cursor-pointer">
-        <summary class="bg-red-900 rounded-t-lg  p-3 pl-6  list-none flex"> ¿Cómo es el proceso de equivalencia?</summary>
-            <p class="p-5 bg-neutral-950 rounded-b-lg"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nobis est sint recusandae delectus, ratione at exercitationem voluptatibus laborum nihil dignissimos accusamus harum laudantium illum distinctio consequuntur nesciunt sed aliquid?
-            </p>   
-    </details>
-    <details class=" text-white text-2xl hover:cursor-pointer">
-        <summary class="  bg-red-900 rounded-t-lg  p-3 pl-6 list-none flex"> ¿El Curso Introductorio es obligatorio? </summary>
-            <p class="p-5 bg-neutral-950 rounded-b-lg"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, aliquam assumenda quidem et pariatur qui doloribus, dolorum repellat aspernatur placeat laboriosam neque veniam quas numquam quod. Ad non quos beatae.
-            </p>   
-    </details>
-    <details class="text-white text-2xl hover:cursor-pointer" >
-        <summary class="bg-red-900 rounded-t-lg p-3 pl-6 list-none flex"> ¿Cuál es el costo del semestre? </summary>
-            <p class="p-5 bg-neutral-950 rounded-b-lg"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem suscipit, incidunt ipsum ut delectus ipsam, soluta minus perferendis, aliquid doloremque perspiciatis. Cumque doloribus possimus harum expedita voluptas fugiat dolorum a.
-            </p>   
-    </details>
+
+<section class="pt-3 pb-10 w-11/12 lg:w-9/12 m-auto">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Pregunta 1 -->
+        <div class="group perspective w-full h-64 cursor-pointer">
+            <div class="relative preserve-3d w-full h-full transition-transform duration-500 group-hover:rotate-y-180">
+                <!-- Frente de la carta -->
+                <div class="absolute backface-hidden w-full h-full bg-red-900 rounded-lg p-6 flex items-center justify-center">
+                    <h3 class="text-2xl text-white text-center">¿Cómo ingresar en la Universidad?</h3>
+                </div>
+                <!-- Reverso de la carta -->
+                <div class="absolute backface-hidden w-full h-full bg-white rounded-lg p-6 rotate-y-180 flex items-center justify-center">
+                    <p class="text-gray-800 text-lg text-center">
+                        Debes presentar tu título de bachiller, cédula de identidad y aprobar el curso introductorio. Luego, completa el proceso de inscripción en línea o en nuestras sedes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="group perspective w-full h-64 cursor-pointer">
+            <div class="relative preserve-3d w-full h-full transition-transform duration-500 group-hover:rotate-y-180">
+                <div class="absolute backface-hidden w-full h-full bg-red-900 rounded-lg p-6 flex items-center justify-center">
+                    <h3 class="text-2xl text-white text-center">¿Cómo es el proceso de equivalencia?</h3>
+                </div>
+                <div class="absolute backface-hidden w-full h-full bg-white rounded-lg p-6 rotate-y-180 flex items-center justify-center">
+                    <p class="text-gray-800 text-lg text-center">
+                        Presenta tus notas certificadas y programas de estudio. Nuestro departamento académico evaluará las materias que pueden ser convalidadas.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="group perspective w-full h-64 cursor-pointer">
+            <div class="relative preserve-3d w-full h-full transition-transform duration-500 group-hover:rotate-y-180">
+                <div class="absolute backface-hidden w-full h-full bg-red-900 rounded-lg p-6 flex items-center justify-center">
+                    <h3 class="text-2xl text-white text-center">¿El Curso Introductorio es obligatorio?</h3>
+                </div>
+                <div class="absolute backface-hidden w-full h-full bg-white rounded-lg p-6 rotate-y-180 flex items-center justify-center">
+                    <p class="text-gray-800 text-lg text-center">
+                        Sí, es un requisito para todos los estudiantes de nuevo ingreso. Tiene una duración de 2 semanas y es completamente gratuito.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="group perspective w-full h-64 cursor-pointer">
+            <div class="relative preserve-3d w-full h-full transition-transform duration-500 group-hover:rotate-y-180">
+                <div class="absolute backface-hidden w-full h-full bg-red-900 rounded-lg p-6 flex items-center justify-center">
+                    <h3 class="text-2xl text-white text-center">¿Ofrecen becas o ayudas económicas?</h3>
+                </div>
+                <div class="absolute backface-hidden w-full h-full bg-white rounded-lg p-6 rotate-y-180 flex items-center justify-center">
+                    <p class="text-gray-800 text-lg text-center">
+                        Sí, contamos con varios programas de becas basados en mérito académico y situación económica. Consulta en nuestro departamento de bienestar estudiantil.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <style>
-	@keyframes show {
-		from{
-			opacity: 0;
-			scale: 40%;
-		}
+    .perspective {
+        perspective: 1000px;
+    }
 
-		to{
-			opacity: 1;
-			scale: 100%;
-		}
-	}
+    .preserve-3d {
+        transform-style: preserve-3d;
+    }
 
-	details {
-		view-timeline-name: --image;
-		view-timeline-axis: block;
-		animation-timeline: --image;
-		animation-name: show;
+    .backface-hidden {
+        backface-visibility: hidden;
+    }
 
-        animation-range: entry 5% cover 15%;
-        animation-fill-mode: both;
-	}
+    .rotate-y-180 {
+        transform: rotateY(180deg);
+    }
+
+    .group:hover .group-hover\:rotate-y-180 {
+        transform: rotateY(180deg);
+    }
 </style>

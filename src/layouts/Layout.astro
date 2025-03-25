@@ -31,13 +31,13 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="../src/img/uah.webp" />
 		<title>{title}</title>
 	</head>	
-	<body class="min-h-screen  bg-gradient-to-br  from-neutral-200 via-neutral-300 to-neutral-400 text-black">
-		<div class="dark:bg-gradient-to-br dark:from-stone-950 dark:via-neutral-950 dark:to-neutral-900 black:text-white items-center ">
+	<body class="min-h-screen bg-gradient-to-br from-neutral-200 via-neutral-300 to-neutral-400 text-black">
+		<div class="dark:bg-gradient-to-br dark:from-stone-950 dark:via-neutral-950 dark:to-neutral-900 black:text-white items-center">
 			<Header class="animate-fade-in"/>
-			<main class="dark:text-white dark:bg-gradient-to-br dark:from-stone-950 dark:via-neutral-950 dark:to-neutral-900">
+			<main class="dark:text-white dark:bg-gradient-to-br dark:from-stone-950 dark:via-neutral-950 dark:to-neutral-900 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<slot/>
 			</main>
-			<Footer  />
+			<Footer />
 	
 			<script type="text/javascript">
 				(function(d, t) {

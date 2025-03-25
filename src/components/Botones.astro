@@ -2,7 +2,33 @@
 const { name } = Astro.props
 ---
 
-<button type="button"  class="text-red-black hover:text-white border border-red-700 hover:bg-red-800 shadow-md shadow-red-900
-focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg text-pequeño lg:text-sm px-5 py-2.5
-text-center me-2 mb-2 hover:animate-pulsing dark:border-red-500 dark:text-red-500 dark:hover:text-white
- dark:hover:bg-red-600 dark:focus:ring-red-900 font-serif"> {name}</button>
+<button type="button" class="relative overflow-hidden bg-white rounded-xl px-6 py-3.5 text-base font-medium
+    transition-all duration-300 ease-in-out
+    text-center me-3 mb-3 w-full max-w-xs
+    hover:text-white">
+    
+    <!-- Texto del botón -->
+    <span class="relative z-20 text-red-950 transition-colors duration-300 tracking-wide font-semibold">
+        {name}
+    </span>
+
+    <!-- Efecto de fondo -->
+    <div class="absolute inset-0 z-10 bg-red-500 transform -translate-x-full transition-transform duration-300 ease-in-out hover:translate-x-0"></div>
+</button>
+
+<style>
+    @keyframes particle {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-20px) scale(0.5); opacity: 0; }
+    }
+
+    .animate-particle {
+        animation: particle 1s ease-in-out infinite;
+    }
+
+    button {
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        will-change: transform, box-shadow;
+    }
+</style>

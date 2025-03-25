@@ -4,8 +4,8 @@ const {subtitulo} = Astro.props;
 const {parrafo} = Astro.props;
 ---
 <div class={orden}>
-    <div>
-        <h4 class="text-white text-3xl lg:text-3xl pb-3 font-bold text-center">{subtitulo}</h4>
-        <p class="text-white text-xl lg:text-xl ">{parrafo}</p>
+    <div class="space-y-4">
+        <h4 class="text-white text-3xl lg:text-3xl pb-3 font-bold text-center tracking-tight">{subtitulo}</h4>
+        <p class="text-white text-xl lg:text-xl leading-relaxed max-w-3xl mx-auto">{parrafo}</p>
     </div>
 </div>

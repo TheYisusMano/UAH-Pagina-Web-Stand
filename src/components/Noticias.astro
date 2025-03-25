@@ -1,8 +1,131 @@
 ---
 import Noticia from '../components/Noticia.astro';
 ---
-<article class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-7xl md:mx-auto my-8 mx-4">
-    <Noticia Titulo="Nuevo semestre" Parrafo="Llega nuevo semestre" Img="../src/img/Noticia1.webp"/>
-    <Noticia Titulo="Nuevo semestre" Parrafo="Llega nuevo semestre" Img="../src/img/Noticia1.webp"/>
-    <Noticia Titulo="Nuevo semestre" Parrafo="Llega nuevo semestre" Img="../src/img/Noticia1.webp" />
+
+<article class="relative max-w-7xl mx-auto my-8 px-4">
+    <div class="relative overflow-hidden">
+        <div class="carousel-container overflow-hidden relative">
+            <div class="carousel-track flex transition-transform duration-500 ease-in-out">
+                <div class="carousel-slide min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-2">
+                    <Noticia Titulo="Programa de intercambio" Parrafo="Oportunidades de intercambio internacional" Img="../src/img/Noticia6.webp"/>
+                </div>
+                <div class="carousel-slide min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-2">
+                    <Noticia Titulo="Nuevo semestre" Parrafo="Comienza un nuevo ciclo académico" Img="../src/img/Noticia1.webp"/>
+                </div>
+                <div class="carousel-slide min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-2">
+                    <Noticia Titulo="Convocatoria becas" Parrafo="Abierta la convocatoria para becas 2024" Img="../src/img/Noticia2.webp"/>
+                </div>
+                <div class="carousel-slide min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-2">
+                    <Noticia Titulo="Talleres extracurriculares" Parrafo="Inscripciones abiertas para talleres" Img="../src/img/Noticia3.webp"/>
+                </div>
+                <div class="carousel-slide min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-2">
+                    <Noticia Titulo="Conferencia internacional" Parrafo="Participa en nuestra conferencia anual" Img="../src/img/Noticia4.webp"/>
+                </div>
+                <div class="carousel-slide min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-2">
+                    <Noticia Titulo="Nuevas instalaciones" Parrafo="Inauguración del nuevo edificio académico" Img="../src/img/Noticia5.webp"/>
+                </div>
+                <div class="carousel-slide min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-2">
+                    <Noticia Titulo="Programa de intercambio" Parrafo="Oportunidades de intercambio internacional" Img="../src/img/Noticia6.webp"/>
+                </div>
+                <div class="carousel-slide min-w-full sm:min-w-[50%] md:min-w-[33.33%] p-2">
+                    <Noticia Titulo="Nuevo semestre" Parrafo="Comienza un nuevo ciclo académico" Img="../src/img/Noticia1.webp"/>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botones con transparencia -->
+        <button class="carousel-prev absolute left-0 top-0 h-full w-12 bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <button class="carousel-next absolute right-0 top-0 h-full w-12 bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+        </button>
+    </div>
 </article>
+
+<script>
+    const track = document.querySelector('.carousel-track') as HTMLElement;
+    const slides = Array.from(document.querySelectorAll('.carousel-slide')) as HTMLElement[];
+    const prevButton = document.querySelector('.carousel-prev') as HTMLButtonElement;
+    const nextButton = document.querySelector('.carousel-next') as HTMLButtonElement;
+    let currentIndex = 1;
+    let autoPlayInterval;
+
+    function moveToSlide(index: number) {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${slideWidth * index}px)`;
+        currentIndex = index;
+    }
+
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(() => {
+            const nextIndex = (currentIndex + 1) % (slides.length - 1);
+            moveToSlide(nextIndex);
+            
+            if (nextIndex === slides.length - 2) {
+                setTimeout(() => {
+                    track.style.transition = 'none';
+                    moveToSlide(1);
+                    setTimeout(() => track.style.transition = 'transform 0.5s ease-in-out');
+                }, 500);
+            }
+        }, 5000);
+    }
+
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    prevButton.addEventListener('click', () => {
+        stopAutoPlay();
+        const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+        moveToSlide(prevIndex);
+        
+        if (prevIndex === 0) {
+            setTimeout(() => {
+                track.style.transition = 'none';
+                moveToSlide(slides.length - 2);
+                setTimeout(() => track.style.transition = 'transform 0.5s ease-in-out');
+            }, 500);
+        }
+        startAutoPlay();
+    });
+
+    nextButton.addEventListener('click', () => {
+        stopAutoPlay();
+        const nextIndex = (currentIndex + 1) % slides.length;
+        moveToSlide(nextIndex);
+        
+        if (nextIndex === slides.length - 1) {
+            setTimeout(() => {
+                track.style.transition = 'none';
+                moveToSlide(1);
+                setTimeout(() => track.style.transition = 'transform 0.5s ease-in-out');
+            }, 500);
+        }
+        startAutoPlay();
+    });
+
+    startAutoPlay();
+</script>
+
+<style>
+    .carousel-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+        flex: 0 0 auto;
+        transition: opacity 0.3s ease;
+    }
+</style>

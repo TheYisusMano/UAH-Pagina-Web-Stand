@@ -7,18 +7,18 @@ const { alt } = Astro.props;
 ---
 
 
-<div  class=" max-w-xs bg-neutral-300 dark:bg-neutral-950  border-gray-200 rounded-lg shadow-black shadow-lg dark:bg-black-800 dark:border-stone-700 m-5 hover:animate-pulsing">
+<div class="max-w-xs bg-neutral-300/50 dark:bg-neutral-950/50 border border-gray-200/20 rounded-lg shadow-black/20 shadow-lg dark:border-stone-700/20 m-5 hover:animate-pulsing transition-all duration-300 hover:scale-105">
     <a href="#">
-        <img class="rounded-t-lg sm:hidden md:block max-h-48 max-w-48" src={src} alt={alt} />
+        <img class="rounded-t-lg sm:hidden md:block max-h-48 w-full object-cover" src={src} alt={alt} />
     </a>
-    <div class="p-5">
+    <div class="p-5 space-y-4">
         <a href="#">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-black dark:text-white">{titulo}</h5>
         </a>
-        <p class="mb-3 font-normal text-black dark:text-gray-400 opacity-80">{contenido}</p>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium  text-white bg-red-900 rounded-lg hover:bg-red-950 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+        <p class="mb-3 font-normal text-black dark:text-gray-400 opacity-80 leading-relaxed">{contenido}</p>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-red-900 rounded-lg hover:bg-red-950 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 transition-all duration-300">
             Saber más
-             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
         </a>

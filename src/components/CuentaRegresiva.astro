@@ -35,7 +35,7 @@ import Titulos from '../components/Titulos.astro';
     const minutosHtml = document.getElementById("minutos");
     const segundosHtml = document.getElementById("segundos");
 
-    const semestre = new Date("February 3, 2025 00:00:00").getTime();
+    const semestre = new Date("May 3, 2025 00:00:00").getTime();
 
     setInterval(() => {
         let actual = new Date().getTime();
@@ -47,10 +47,10 @@ import Titulos from '../components/Titulos.astro';
         let minutos =  Math.floor(tiempo/60000) % 60;
         let segundos =  Math.floor(tiempo/1000) % 60;
 
-        diasHtml.innerHTML = dias;
-        horasHtml.innerHTML = horas;
-        minutosHtml.innerHTML = minutos;
-        segundosHtml.innerHTML = segundos;
+        diasHtml.innerHTML = dias.toString();
+        horasHtml.innerHTML = horas.toString();
+        minutosHtml.innerHTML = minutos.toString();
+        segundosHtml.innerHTML = segundos.toString();
 
         if( horas < 10) horasHtml.innerHTML = "0" + horas;
         if( minutos < 10) minutosHtml.innerHTML = "0" + minutos;
