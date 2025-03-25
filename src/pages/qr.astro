@@ -1,0 +1,62 @@
+---
+import WebSocketComponent from '../components/Websocket';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Pagina uah">
+  <WebSocketComponent client:load />
+</Layout>
+
+<style>
+  @keyframes slide-in-bottom {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-bottom {
+    animation: slide-in-bottom 1s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animate-delay-700 {
+    animation-delay: 700ms;
+  }
+
+  .animate-delay-900 {
+    animation-delay: 900ms;
+  }
+
+  .animate-delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  .animate-duration-slow {
+    animation-duration: 1.5s;
+  }
+</style>
