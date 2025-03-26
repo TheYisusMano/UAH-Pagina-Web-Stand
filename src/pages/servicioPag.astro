@@ -2,27 +2,83 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Titulos from '../components/Titulos.astro';
-import SubtituloAndText from '../components/SubtituloAndText.astro';
 ---
 <Layout title="Pagina uah">
 	<Hero source="../src/img/VideoServicio.mp4" h2="CLASE UAH" p="Amplia tus conocimientos" frase="“Dondequiera que el ciudadano se vuelva indiferente hacia sus semejantes, también lo será el esposo hacia su esposa.”" cita="Alejandro de Humboldt"/>
 	<Titulos titulowhite="Sobre" titulored="Nosotros" clase="pt-44 pb-10"/>
-	<img class="w-2/6 m-auto py-8" src="../src/img/Noticia1.webp" alt="">
-	<div class="flex flex-col p-4">
-		<div class="m-auto flex flex-row justify-center gap-10">
-			<div class=" p-4 border-stone-950 border-x-4 bg-red-900 hover:opacity-90 rounded-lg w-3/12">
-				<img class="m-auto w-4/12 p-4" src="../src/img/mision.webp" alt="">
-				<SubtituloAndText orden="" subtitulo="Misión" parrafo="Ser una organización lider en la capacitación y administración de recursos humanos que el país demanda para el desempeño de profesionales."/>
+	<section class="pt-3 pb-10 w-11/12 lg:w-9/12 m-auto">
+     
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<!-- Pregunta 1 -->
+			<div class="group perspective w-full h-64 cursor-pointer">
+				<div class="relative preserve-3d w-full h-full transition-transform duration-500 group-hover:rotate-y-180 hover:opacity-90">
+					<!-- Frente de la carta -->
+					<div class="absolute backface-hidden w-full h-full bg-red-900 rounded-lg p-6 flex items-center justify-center border-black border-x-4">
+						<img class="m-auto w-4/12 p-4" src="../src/img/mision.webp" alt="">
+						<h3 class="text-2xl text-white text-center">¿Cómo ingresar en la Universidad?</h3>
+					</div>
+					<!-- Reverso de la carta -->
+					<div class="absolute backface-hidden w-full h-full bg-white rounded-lg p-6 rotate-y-180 flex items-center justify-center">
+						<p class="text-gray-800 text-lg text-center">
+							Debes presentar tu título de bachiller, cédula de identidad y aprobar el curso introductorio. Luego, completa el proceso de inscripción en línea o en nuestras sedes.
+						</p>
+					</div>
+				</div>
 			</div>
-			<div class=" p-4 border-stone-950 border-x-4 bg-red-900 hover:opacity-90 rounded-lg w-3/12 ">
-				<img class="m-auto w-4/12 p-4" src="../src/img/vision.webp" alt="">
-				<SubtituloAndText orden="" subtitulo="Visión" parrafo="Busca la verdad mediante la difusión, creación y asimilación del saber."/>
+	
+			<!-- Pregunta 2 -->
+			<div class="group perspective w-full h-64 cursor-pointer">
+				<div class="relative preserve-3d w-full h-full transition-transform duration-500 group-hover:rotate-y-180">
+					<div class="absolute backface-hidden w-full h-full bg-red-900 rounded-lg p-6 flex items-center justify-center border-black border-x-4">
+						<img class="m-auto w-4/12 p-4" src="../src/img/vision.webp" alt="">
+						<h3 class="text-2xl text-white text-center">¿Cómo es el proceso de equivalencia?</h3>
+					</div>
+					<div class="absolute backface-hidden w-full h-full bg-white rounded-lg p-6 rotate-y-180 flex items-center justify-center">
+						<p class="text-gray-800 text-lg text-center">
+							Presenta tus notas certificadas y programas de estudio. Nuestro departamento académico evaluará las materias que pueden ser convalidadas.
+						</p>
+					</div>
+				</div>
 			</div>
-			<div class="bg-red-900 p-4 border-stone-950 border-x-4 rounded-lg w-3/12 hover:opacity-90 ">
-				<img class="m-auto w-4/12 p-4" src="../src/img/valores.webp" alt="">
-				<SubtituloAndText orden="m-auto" subtitulo="Valores" parrafo="Respeto, Responsabilidad, Justicia, Integridad, Honestidad y Disciplina"/>
+	
+			<!-- Pregunta 3 -->
+			<div class="group perspective w-full h-64 cursor-pointer">
+				<div class="relative preserve-3d w-full h-full transition-transform duration-500 group-hover:rotate-y-180">
+					<div class="absolute backface-hidden w-full h-full bg-red-900 rounded-lg p-6 flex items-center justify-center border-black border-x-4">
+						<img class="m-auto w-4/12 p-4" src="../src/img/valores.webp" alt="">
+						<h3 class="text-2xl text-white text-center">¿El Curso Introductorio es obligatorio?</h3>
+					</div>
+					<div class="absolute backface-hidden w-full h-full bg-white rounded-lg p-6 rotate-y-180 flex items-center justify-center">
+						<p class="text-gray-800 text-lg text-center">
+							Sí, es un requisito para todos los estudiantes de nuevo ingreso. Tiene una duración de 2 semanas y es completamente gratuito.
+						</p>
+					</div>
+				</div>
 			</div>
-		</div>	
-	</div>
+
+		</div>
+	</section>
+
+	<style>
+		    .perspective {
+         perspective: 1000px;
+     }
+ 
+     .preserve-3d {
+         transform-style: preserve-3d;
+     }
+ 
+     .backface-hidden {
+         backface-visibility: hidden;
+     }
+ 
+     .rotate-y-180 {
+         transform: rotateY(180deg);
+     }
+ 
+     .group:hover .group-hover\:rotate-y-180 {
+         transform: rotateY(180deg);
+     }
+	</style>
 </Layout>
 
