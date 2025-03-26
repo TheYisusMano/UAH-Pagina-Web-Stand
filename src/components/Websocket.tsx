@@ -28,7 +28,7 @@ const WebSocketComponent = () => {
       .then( async(data) => {
         const data3 = await data.json();
         console.log(data3);
-        setDataUser( await data.json())
+        setDataUser(data3);
       }).then(console.log);
       setEstasAutenticado(true);
     }
@@ -43,7 +43,7 @@ const WebSocketComponent = () => {
         <p className="text-2xl max-w-[400px] text-black text-center font-semibold">
           Registrate utilizando la aplicación mobile de la UAH
         </p>
-        {estasAutenticado && <div className="text-black text-2xl mt-4">Estas autenticado.</div>}
+        {estasAutenticado && <div className="text-black text-2xl mt-4">Estas autenticado: {dataUser?.user_name}.</div>}
         {lastJsonMessage && (
           <img className="w-full aspect-square" src={qrCode}></img>
         )}
