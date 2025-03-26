@@ -8,6 +8,7 @@ const WebSocketComponent = () => {
 
   const [qrCode, setQrCode] = useState<string>();
   const [estasAutenticado, setEstasAutenticado] = useState<boolean>(false);
+  const [dataUser, setDataUser] = useState<any>();
 
   const { lastJsonMessage } = isBrowser
     ? useWebSocket(socketUrl)
@@ -23,11 +24,18 @@ const WebSocketComponent = () => {
 
     if (mensage.event == 'AUTH') {
       cookies.setItem('access_token', mensage.data.token);
+      fetch("https://uah-api-stand.onrender.com/protected", { headers: { 'Authorization': `Bearer ${mensage.data.token}` } })
+      .then( async(data) => {
+        const data3 = await data.json();
+        console.log(data3);
+        setDataUser( await data.json())
+      }).then(console.log);
       setEstasAutenticado(true);
     }
 
   }, [lastJsonMessage]);
-
+  
+  console.log(dataUser);
   return (
     <div className="flex mt-10 mb-20 items-center flex-col justify-center">
       <h2 className="text-3xl font-semibold">Iniciar Sesión</h2>
